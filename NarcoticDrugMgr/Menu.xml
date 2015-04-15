@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Menu">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="NODEID" minOccurs="0">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:maxLength value="40" />
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="PARENTID" minOccurs="0">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:maxLength value="10" />
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="NODENAME" minOccurs="0">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:maxLength value="20" />
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="MODULE_CODE" minOccurs="0">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:maxLength value="20" />
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="ADDDLL" minOccurs="0">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:maxLength value="40" />
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="ADDRESS" minOccurs="0">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:maxLength value="60" />
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="ICON" minOccurs="0">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:maxLength value="200" />
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="BACKGROUND" type="xs:decimal" minOccurs="0" />
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
+    <Menu>
+        <NODEID>0100</NODEID>
+        <PARENTID>0</PARENTID>
+        <NODENAME>基本信息</NODENAME>
+        <MODULE_CODE>0</MODULE_CODE>
+        <ADDDLL></ADDDLL>
+        <ADDRESS></ADDRESS>
+        <ICON>Icon\leak.ico</ICON>
+        <BACKGROUND>0</BACKGROUND>
+    </Menu>
+    <Menu>
+        <NODEID>0101</NODEID>
+        <PARENTID>0100</PARENTID>
+        <NODENAME>职工信息</NODENAME>
+        <MODULE_CODE>0</MODULE_CODE>
+        <ADDDLL>NarcoticDrugMgr.dll</ADDDLL>
+        <ADDRESS>SNDMS.NarcoticDrugMgr.FrmStaff</ADDRESS>
+        <ICON>Icon\leak.ico</ICON>
+        <BACKGROUND>0</BACKGROUND>
+    </Menu>
+    <Menu>
+        <NODEID>0102</NODEID>
+        <PARENTID>0100</PARENTID>
+        <NODENAME>药品目录</NODENAME>
+        <MODULE_CODE>0</MODULE_CODE>
+        <ADDDLL>NarcoticDrugMgr.dll</ADDDLL>
+        <ADDRESS>SNDMS.NarcoticDrugMgr.FrmDrugDict</ADDRESS>
+        <ICON>Icon\leak.ico</ICON>
+        <BACKGROUND>0</BACKGROUND>
+    </Menu>
+    <Menu>
+        <NODEID>0103</NODEID>
+        <PARENTID>0100</PARENTID>
+        <NODENAME>套餐箱设置</NODENAME>
+        <MODULE_CODE>0</MODULE_CODE>
+        <ADDDLL>NarcoticDrugMgr.dll</ADDDLL>
+        <ADDRESS>SNDMS.NarcoticDrugMgr.FrmPackageTypeDict</ADDRESS>
+        <ICON>Icon\leak.ico</ICON>
+        <BACKGROUND>0</BACKGROUND>
+    </Menu>
+    <Menu>
+        <NODEID>0104</NODEID>
+        <PARENTID>0100</PARENTID>
+        <NODENAME>套餐柜货位设置</NODENAME>
+        <MODULE_CODE>0</MODULE_CODE>
+        <ADDDLL>NarcoticDrugMgr.dll</ADDDLL>
+        <ADDRESS>SNDMS.NarcoticDrugMgr.FrmPackageAllocationSet</ADDRESS>
+        <ICON>Icon\leak.ico</ICON>
+        <BACKGROUND>0</BACKGROUND>
+    </Menu>
+    <Menu>
+        <NODEID>0200</NODEID>
+        <PARENTID>0</PARENTID>
+        <NODENAME>日常操作</NODENAME>
+        <MODULE_CODE>0</MODULE_CODE>
+        <ADDDLL></ADDDLL>
+        <ADDRESS></ADDRESS>
+        <ICON>Icon\leak.ico</ICON>
+        <BACKGROUND>0</BACKGROUND>
+    </Menu>
+    
+    <Menu>
+        <NODEID>0201</NODEID>
+        <PARENTID>0200</PARENTID>
+        <NODENAME>套餐箱使用登记</NODENAME>
+        <MODULE_CODE>0</MODULE_CODE>
+        <ADDDLL>NarcoticDrugMgr.dll</ADDDLL>
+        <ADDRESS>SNDMS.NarcoticDrugMgr.FrmPackageUseRecord</ADDRESS>
+        <ICON>Icon\leak.ico</ICON>
+        <BACKGROUND>0</BACKGROUND>
+    </Menu>
+    <Menu>
+        <NODEID>0202</NODEID>
+        <PARENTID>0200</PARENTID>
+        <NODENAME>空瓶回收登记</NODENAME>
+        <MODULE_CODE>0</MODULE_CODE>
+        <ADDDLL>NarcoticDrugMgr.dll</ADDDLL>
+        <ADDRESS>SNDMS.NarcoticDrugMgr.FrmRegisterWaste</ADDRESS>
+        <ICON>Icon\leak.ico</ICON>
+        <BACKGROUND>0</BACKGROUND>
+    </Menu>
+</NewDataSet>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DatabaseSetting>
+    <DataSource>GAVIN-410\SQLEXPRESS</DataSource>
+    <InitialCatalog>Cabinet</InitialCatalog>
+    <UserID>EssUser</UserID>
+    <Password>123</Password>
+</DatabaseSetting>

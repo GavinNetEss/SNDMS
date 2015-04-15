@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AppSetting>
+    <AppName>病区智能药柜管理系统</AppName>
+    
+    <!--开机是否同步库存： 0，否；1,是-->
+    <StockStart>0</StockStart>
+    <!--程序启动后是否自动发药： 0，否；1,是-->
+    <AutoPick>0</AutoPick>
+
+
+    <!--通信IP-->
+    <CommunicationIP>192.168.1.152</CommunicationIP>
+    <!--通信端口-->
+    <CommunicationPort>6366</CommunicationPort>
+
+
+    <LanguageSet>
+        <LanguageType  value="EN" />
+        <!--EN是英，CH是中文-->
+    </LanguageSet>
+    <DatabaseSet>
+        <IsSqlServer value="1" />
+        <!--1是，2不是-->
+        <SqlServerConnectionstring value="Server=(local); Database=WMS;  User ID=sa; Password=" />
+        <AccessConnectionstring value=" Provider=Microsoft.Jet.OLEDB.4.0;Data Source=BMS.mdb" />
+    </DatabaseSet>
+    <FTPSetup>
+        <!--ftp server 相关设置-->
+        <RemoteHostIP      value="192.168.0.103"/>
+        <RemotePath       value="/"/>
+        <RemoteUserName   value="EssGuest"/>
+        <RemotePassWord   value="123"/>
+        <RemotePort       value="21"/>
+        <UploadDir        value="E:\FTPtest"/>
+        <DownloadDir      value="21"/>
+    </FTPSetup>
+</AppSetting>
