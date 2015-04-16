@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.gbKeyBoard = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
@@ -67,6 +65,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.gbKeyBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,26 +116,6 @@
             this.gbKeyBoard.TabIndex = 24;
             this.gbKeyBoard.TabStop = false;
             this.gbKeyBoard.Enter += new System.EventHandler(this.gbKeyBoard_Enter);
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button10.Location = new System.Drawing.Point(640, 227);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(86, 50);
-            this.button10.TabIndex = 39;
-            this.button10.Text = "关闭";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button12.Location = new System.Drawing.Point(20, 227);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(89, 50);
-            this.button12.TabIndex = 38;
-            this.button12.Text = "删除";
-            this.button12.UseVisualStyleBackColor = true;
             // 
             // button24
             // 
@@ -236,6 +216,7 @@
             this.button27.TabIndex = 28;
             this.button27.Text = "J";
             this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // button28
             // 
@@ -496,6 +477,26 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button10.Location = new System.Drawing.Point(640, 227);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(86, 50);
+            this.button10.TabIndex = 39;
+            this.button10.Text = "关闭";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button12.Location = new System.Drawing.Point(20, 227);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(89, 50);
+            this.button12.TabIndex = 38;
+            this.button12.Text = "删除";
+            this.button12.UseVisualStyleBackColor = true;
             // 
             // FrmKeyBoard
             // 
