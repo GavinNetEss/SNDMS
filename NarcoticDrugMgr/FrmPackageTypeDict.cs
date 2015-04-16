@@ -13,7 +13,8 @@ namespace SNDMS.NarcoticDrugMgr
 {
     public partial class FrmPackageTypeDict : Form
     {
-        DAL.PackageTypeDAL packageTypeDAL = new PackageTypeDAL();
+        DAL.PackageTypeDAL dalPackageType = new PackageTypeDAL();
+        DAL.PackageTypeDrugDAL dalPackageTypeDrug = new PackageTypeDrugDAL();
 
         public FrmPackageTypeDict()
         {
@@ -37,7 +38,7 @@ namespace SNDMS.NarcoticDrugMgr
         {
             tvPackageType.Nodes.Clear();
 
-            DataSet dsPackageType = packageTypeDAL.GetList("");
+            DataSet dsPackageType = dalPackageType.GetList("");
             if (dsPackageType != null && dsPackageType.Tables[0].Rows.Count > 0)
             {
                 for (int i = 0; i < dsPackageType.Tables[0].Rows.Count; i++)
@@ -58,7 +59,7 @@ namespace SNDMS.NarcoticDrugMgr
         private void BindPackageDrugList(string packageTypeNo)
         {
 
-            DataSet dsPackageDrug = packageTypeDAL.GetListWithDrugName(" packageTypeNo =" + packageTypeNo);
+            DataSet dsPackageDrug = dalPackageType.GetListWithDrugName(" packageTypeNo =" + packageTypeNo);
             if (dsPackageDrug != null && dsPackageDrug.Tables[0].Rows.Count > 0)
             {
                 dgvPackageDrugList.DataSource = dsPackageDrug.Tables[0].DefaultView;
@@ -82,7 +83,7 @@ namespace SNDMS.NarcoticDrugMgr
             //添加
             SNDMS.Model.PackageType model = new Model.PackageType();
             model.PackageTypeName = txtPackageTypeName.Text.Trim();
-            packageTypeDAL.Add(model);
+            dalPackageType.Add(model);
             //刷新绑定
             BindPackageType();
 
@@ -99,7 +100,7 @@ namespace SNDMS.NarcoticDrugMgr
             if (tvPackageType.SelectedNode != null)
             {
                 int typeNo = int.Parse(tvPackageType.SelectedNode.Tag.ToString());
-                packageTypeDAL.Delete(typeNo);
+                dalPackageType.Delete(typeNo);
                 //刷新绑定
                 BindPackageType();
             }
@@ -144,6 +145,11 @@ namespace SNDMS.NarcoticDrugMgr
 
             txtCount.Focus();
             txtCount.Select();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
 
       

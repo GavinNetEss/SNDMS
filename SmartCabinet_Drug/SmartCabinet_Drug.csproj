@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>3fa5a1cd-9a94-49d6-a3af-fabc385343e1</ProjectGuid>
+    <ProjectGuid>{66B31743-64D0-45AB-87C4-AAB75CC7C4C4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SmartCabinet_Drug</RootNamespace>

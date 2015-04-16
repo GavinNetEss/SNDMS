@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DrugModel.cs" />
-    <Compile Include="PackageTypeDrugModel.cs" />
+    <Compile Include="PackageTypeDrug.cs" />
     <Compile Include="PackageTypel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>55f0b4bc-2ece-4e82-b74f-1a37b6ce1c06</ProjectGuid>
+    <ProjectGuid>{66C1D940-520A-4F6D-BBD8-DBCB7F1B4321}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SmartCabinet_PackageBox</RootNamespace>
