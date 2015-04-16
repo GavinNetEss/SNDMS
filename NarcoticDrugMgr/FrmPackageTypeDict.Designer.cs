@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPackageDrugList = new System.Windows.Forms.DataGridView();
             this.colDrugNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDrugName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDrugSpec = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,45 +36,46 @@
             this.colCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelPackageType = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtManufactory = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSpec = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDrugName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnAddPackageType = new System.Windows.Forms.Button();
             this.txtPackageTypeName = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.tvPackageType = new System.Windows.Forms.TreeView();
             this.lblPackageTypeSelected = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtDrugID = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPackageDrugList)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPackageDrugList
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvPackageDrugList.AllowUserToAddRows = false;
+            this.dgvPackageDrugList.AllowUserToDeleteRows = false;
+            this.dgvPackageDrugList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPackageDrugList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPackageDrugList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDrugNo,
             this.colDrugName,
             this.colDrugSpec,
             this.colManufactory,
             this.colCount});
-            this.dataGridView1.Location = new System.Drawing.Point(217, 54);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 25;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(693, 371);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPackageDrugList.Location = new System.Drawing.Point(217, 54);
+            this.dgvPackageDrugList.Name = "dgvPackageDrugList";
+            this.dgvPackageDrugList.ReadOnly = true;
+            this.dgvPackageDrugList.RowHeadersWidth = 25;
+            this.dgvPackageDrugList.RowTemplate.Height = 23;
+            this.dgvPackageDrugList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPackageDrugList.Size = new System.Drawing.Size(693, 371);
+            this.dgvPackageDrugList.TabIndex = 0;
             // 
             // colDrugNo
             // 
@@ -127,13 +128,13 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "所选套餐箱：";
             // 
-            // textBox3
+            // txtManufactory
             // 
-            this.textBox3.Location = new System.Drawing.Point(550, 22);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(105, 23);
-            this.textBox3.TabIndex = 21;
+            this.txtManufactory.Location = new System.Drawing.Point(550, 22);
+            this.txtManufactory.Name = "txtManufactory";
+            this.txtManufactory.ReadOnly = true;
+            this.txtManufactory.Size = new System.Drawing.Size(105, 23);
+            this.txtManufactory.TabIndex = 21;
             // 
             // label3
             // 
@@ -144,13 +145,13 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "厂家";
             // 
-            // textBox2
+            // txtSpec
             // 
-            this.textBox2.Location = new System.Drawing.Point(399, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(105, 23);
-            this.textBox2.TabIndex = 19;
+            this.txtSpec.Location = new System.Drawing.Point(399, 22);
+            this.txtSpec.Name = "txtSpec";
+            this.txtSpec.ReadOnly = true;
+            this.txtSpec.Size = new System.Drawing.Size(105, 23);
+            this.txtSpec.TabIndex = 19;
             // 
             // label1
             // 
@@ -161,12 +162,13 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "规格";
             // 
-            // textBox4
+            // txtDrugName
             // 
-            this.textBox4.Location = new System.Drawing.Point(249, 22);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(105, 23);
-            this.textBox4.TabIndex = 17;
+            this.txtDrugName.Location = new System.Drawing.Point(249, 22);
+            this.txtDrugName.Name = "txtDrugName";
+            this.txtDrugName.Size = new System.Drawing.Size(105, 23);
+            this.txtDrugName.TabIndex = 17;
+            this.txtDrugName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDrugName_KeyDown);
             // 
             // label4
             // 
@@ -177,12 +179,12 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "药品";
             // 
-            // textBox5
+            // txtCount
             // 
-            this.textBox5.Location = new System.Drawing.Point(698, 22);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(105, 23);
-            this.textBox5.TabIndex = 23;
+            this.txtCount.Location = new System.Drawing.Point(698, 22);
+            this.txtCount.Name = "txtCount";
+            this.txtCount.Size = new System.Drawing.Size(105, 23);
+            this.txtCount.TabIndex = 23;
             // 
             // label5
             // 
@@ -193,15 +195,15 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "数量";
             // 
-            // button4
+            // btnSave
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(809, 22);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 23);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "保存";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Location = new System.Drawing.Point(809, 22);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.TabIndex = 24;
+            this.btnSave.Text = "保存";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnAddPackageType
             // 
@@ -247,33 +249,44 @@
             // lblPackageTypeSelected
             // 
             this.lblPackageTypeSelected.AutoSize = true;
+            this.lblPackageTypeSelected.ForeColor = System.Drawing.Color.Red;
             this.lblPackageTypeSelected.Location = new System.Drawing.Point(97, 25);
             this.lblPackageTypeSelected.Name = "lblPackageTypeSelected";
             this.lblPackageTypeSelected.Size = new System.Drawing.Size(0, 17);
             this.lblPackageTypeSelected.TabIndex = 32;
+            // 
+            // txtDrugID
+            // 
+            this.txtDrugID.Location = new System.Drawing.Point(399, -7);
+            this.txtDrugID.Name = "txtDrugID";
+            this.txtDrugID.ReadOnly = true;
+            this.txtDrugID.Size = new System.Drawing.Size(105, 23);
+            this.txtDrugID.TabIndex = 33;
+            this.txtDrugID.Visible = false;
             // 
             // FrmPackageTypeDict
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 450);
+            this.Controls.Add(this.txtDrugID);
             this.Controls.Add(this.lblPackageTypeSelected);
             this.Controls.Add(this.tvPackageType);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtPackageTypeName);
             this.Controls.Add(this.btnAddPackageType);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtCount);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtManufactory);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSpec);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtDrugName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDelPackageType);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPackageDrugList);
             this.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -282,7 +295,7 @@
             this.ShowInTaskbar = false;
             this.Text = "FrmDrugDict";
             this.Load += new System.EventHandler(this.FrmPackageBoxDict_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPackageDrugList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,7 +303,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPackageDrugList;
         private System.Windows.Forms.Button btnDelPackageType;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDrugNo;
@@ -298,19 +311,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDrugSpec;
         private System.Windows.Forms.DataGridViewTextBoxColumn colManufactory;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCount;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtManufactory;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSpec;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDrugName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCount;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnAddPackageType;
         private System.Windows.Forms.TextBox txtPackageTypeName;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TreeView tvPackageType;
         private System.Windows.Forms.Label lblPackageTypeSelected;
+        private System.Windows.Forms.TextBox txtDrugID;
     }
 }

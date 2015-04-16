@@ -179,6 +179,22 @@ namespace SNDMS.DAL
         }
 
         /// <summary>
+        /// 获取数据列表 
+        /// </summary>
+        public DataSet GetListWithDrugName(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select PackageTypeNo,DrugNo,Count,DrugName,DrugSpec,Manufactory ");
+            strSql.Append(" FROM dbo.View_PackageContent ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            return SqlHelper.ExecuteDataset(strSql.ToString());
+        }
+
+
+        /// <summary>
         /// 获得前几行数据
         /// </summary>
         public DataSet GetList(int Top, string strWhere, string filedOrder)

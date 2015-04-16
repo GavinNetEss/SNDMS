@@ -67,6 +67,10 @@ namespace SNDMS.NarcoticDrugMgr
 
                 dtDrug.Rows.Add(drNew);
                 dgvDrugList.DataSource = dtDrug.DefaultView;
+
+                this.dgvDrugList.Rows[dgvDrugList.Rows.Count - 1].Selected = true;
+
+
             }
             //标识状态
             txtDrugNo.Text = "新增";
@@ -97,12 +101,14 @@ namespace SNDMS.NarcoticDrugMgr
             }
 
             //采集数据
-            Model.DrugDict modelDrug = new Model.DrugDict();
+            Model.DrugModel modelDrug = new Model.DrugModel();
             modelDrug.DrugName = txtName.Text.Trim();
             modelDrug.DrugSpec = txtSpec.Text.Trim();
             modelDrug.Manufactory = txtFactory.Text.Trim();
             modelDrug.Unit = txtUnitPackage.Text.Trim();
             modelDrug.DrugClass = cmbClass.Text;
+            modelDrug.PYcode = txtPYCode.Text;
+
             if (rbtnRecyleYes.Checked)
             {
                 modelDrug.IsRecycle = "是";
@@ -112,6 +118,7 @@ namespace SNDMS.NarcoticDrugMgr
                 modelDrug.IsRecycle = "否";
             }
 
+            
 
             if (txtDrugNo.Text == "新增")//新增保存
             {
@@ -182,6 +189,11 @@ namespace SNDMS.NarcoticDrugMgr
                     ReSelect();
                 }
             }
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            txtPYCode.Text = SNDMS.Assist.PYcode.EssGetChineseSpellFirst(txtName.Text.Trim());
         }
 
       

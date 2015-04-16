@@ -28,7 +28,7 @@ namespace SNDMS.DAL
         /// <summary>
         /// 增加一条数据
         /// </summary>
-        public int Add(SNDMS.Model.DrugDict model)
+        public int Add(SNDMS.Model.DrugModel model)
         {
             StringBuilder strSql = new StringBuilder();
             StringBuilder strSql1 = new StringBuilder();
@@ -63,6 +63,11 @@ namespace SNDMS.DAL
                 strSql1.Append("IsRecycle,");
                 strSql2.Append("'" + model.IsRecycle + "',");
             }
+            if (model.PYcode != null)
+            {
+                strSql1.Append("PYcode,");
+                strSql2.Append("'" + model.PYcode + "',");
+            }
             strSql.Append("insert into DrugDict(");
             strSql.Append(strSql1.ToString().Remove(strSql1.Length - 1));
             strSql.Append(")");
@@ -84,7 +89,7 @@ namespace SNDMS.DAL
         /// <summary>
         /// 更新一条数据
         /// </summary>
-        public bool Update(SNDMS.Model.DrugDict model)
+        public bool Update(SNDMS.Model.DrugModel model)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("update DrugDict set ");
@@ -135,6 +140,14 @@ namespace SNDMS.DAL
             else
             {
                 strSql.Append("IsRecycle= null ,");
+            }
+            if (model.PYcode != null)
+            {
+                strSql.Append("PYcode='" + model.PYcode + "',");
+            }
+            else
+            {
+                strSql.Append("PYcode= null ,");
             }
             int n = strSql.ToString().LastIndexOf(",");
             strSql.Remove(n, 1);
@@ -190,14 +203,14 @@ namespace SNDMS.DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public SNDMS.Model.DrugDict GetModel(int DrugNo)
+        public SNDMS.Model.DrugModel GetModel(int DrugNo)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select  top 1  ");
-            strSql.Append(" DrugNo,DrugName,DrugSpec,Manufactory,Unit,DrugClass,IsRecycle ");
+            strSql.Append(" DrugNo,DrugName,DrugSpec,Manufactory,Unit,DrugClass,IsRecycle,PYcode ");
             strSql.Append(" from DrugDict ");
             strSql.Append(" where DrugNo=" + DrugNo + "");
-            SNDMS.Model.DrugDict model = new SNDMS.Model.DrugDict();
+            SNDMS.Model.DrugModel model = new SNDMS.Model.DrugModel();
             DataSet ds = SqlHelper.ExecuteDataset(strSql.ToString());
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -229,6 +242,10 @@ namespace SNDMS.DAL
                 {
                     model.IsRecycle = ds.Tables[0].Rows[0]["IsRecycle"].ToString();
                 }
+                if (ds.Tables[0].Rows[0]["PYcode"] != null && ds.Tables[0].Rows[0]["PYcode"].ToString() != "")
+                {
+                    model.PYcode = ds.Tables[0].Rows[0]["PYcode"].ToString();
+                }
                 return model;
             }
             else
@@ -242,7 +259,7 @@ namespace SNDMS.DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select DrugNo,DrugName,DrugSpec,Manufactory,Unit,DrugClass,IsRecycle ");
+            strSql.Append("select DrugNo,DrugName,DrugSpec,Manufactory,Unit,DrugClass,IsRecycle,PYcode ");
             strSql.Append(" FROM DrugDict ");
             if (strWhere.Trim() != "")
             {
@@ -263,7 +280,7 @@ namespace SNDMS.DAL
             {
                 strSql.Append(" top " + Top.ToString());
             }
-            strSql.Append(" DrugNo,DrugName,DrugSpec,Manufactory,Unit,DrugClass,IsRecycle ");
+            strSql.Append(" DrugNo,DrugName,DrugSpec,Manufactory,Unit,DrugClass,IsRecycle,PYcode ");
             strSql.Append(" FROM DrugDict ");
             if (strWhere.Trim() != "")
             {

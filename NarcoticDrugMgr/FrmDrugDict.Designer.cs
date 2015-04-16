@@ -55,6 +55,9 @@
             this.colUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIsRecycle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDrugClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comPYcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPYCode = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrugList)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +77,8 @@
             this.colManufactory,
             this.colUnit,
             this.colIsRecycle,
-            this.colDrugClass});
+            this.colDrugClass,
+            this.comPYcode});
             this.dgvDrugList.Location = new System.Drawing.Point(25, 25);
             this.dgvDrugList.MultiSelect = false;
             this.dgvDrugList.Name = "dgvDrugList";
@@ -90,6 +94,8 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtPYCode);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.rbtnRecyleNo);
             this.groupBox1.Controls.Add(this.rbtnRecyleYes);
             this.groupBox1.Controls.Add(this.txtDrugNo);
@@ -110,7 +116,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(580, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(243, 388);
+            this.groupBox1.Size = new System.Drawing.Size(243, 407);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -155,7 +161,7 @@
             // 
             // btnDel
             // 
-            this.btnDel.Location = new System.Drawing.Point(44, 343);
+            this.btnDel.Location = new System.Drawing.Point(46, 371);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(75, 23);
             this.btnDel.TabIndex = 9;
@@ -165,7 +171,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(125, 309);
+            this.btnSave.Location = new System.Drawing.Point(127, 337);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 8;
@@ -175,7 +181,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(44, 309);
+            this.btnAdd.Location = new System.Drawing.Point(46, 337);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 0;
@@ -270,6 +276,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(146, 23);
             this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label1
             // 
@@ -330,6 +337,30 @@
             this.colDrugClass.Name = "colDrugClass";
             this.colDrugClass.ReadOnly = true;
             // 
+            // comPYcode
+            // 
+            this.comPYcode.DataPropertyName = "PYcode";
+            this.comPYcode.HeaderText = "拼音简码";
+            this.comPYcode.Name = "comPYcode";
+            this.comPYcode.ReadOnly = true;
+            // 
+            // txtPYCode
+            // 
+            this.txtPYCode.Location = new System.Drawing.Point(80, 301);
+            this.txtPYCode.Name = "txtPYCode";
+            this.txtPYCode.ReadOnly = true;
+            this.txtPYCode.Size = new System.Drawing.Size(146, 23);
+            this.txtPYCode.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(19, 304);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 17);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "拼音简码";
+            // 
             // FrmDrugDict
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -381,5 +412,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIsRecycle;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDrugClass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comPYcode;
+        private System.Windows.Forms.TextBox txtPYCode;
+        private System.Windows.Forms.Label label8;
     }
 }

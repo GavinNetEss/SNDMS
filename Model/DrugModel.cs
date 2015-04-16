@@ -5,9 +5,9 @@ namespace SNDMS.Model
     /// DrugDict:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>
     [Serializable]
-    public partial class DrugDict
+    public partial class DrugModel
     {
-        public DrugDict()
+        public DrugModel()
         { }
         #region Model
         private int _drugno;
@@ -17,6 +17,7 @@ namespace SNDMS.Model
         private string _unit;
         private string _drugclass;
         private string _isrecycle;
+        private string _pycode;
         /// <summary>
         /// 药品唯一编号
         /// </summary>
@@ -72,6 +73,14 @@ namespace SNDMS.Model
         {
             set { _isrecycle = value; }
             get { return _isrecycle; }
+        }
+        /// <summary>
+        /// 拼音简码
+        /// </summary>
+        public string PYcode
+        {
+            set { _pycode = value; }
+            get { return _pycode; }
         }
         #endregion Model
 

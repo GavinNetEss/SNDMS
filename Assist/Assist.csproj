@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C7C444EF-4404-4B71-867B-79652E1B50AF}</ProjectGuid>
+    <ProjectGuid>{93EDA48C-C8E4-4B31-A03B-4F991A060E84}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SNDMS.Model</RootNamespace>
-    <AssemblyName>Model</AssemblyName>
+    <RootNamespace>SNDMS.Assist</RootNamespace>
+    <AssemblyName>Assist</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,10 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DrugModel.cs" />
-    <Compile Include="PackageTypeDrugModel.cs" />
-    <Compile Include="PackageTypel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PYcode.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
